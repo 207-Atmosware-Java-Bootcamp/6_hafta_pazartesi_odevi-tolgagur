@@ -2,13 +2,28 @@
 package odev;
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class Fibonacci {
-  public static void main(String[] args) {
+
 
     public static void print() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Bir fibonacci sayısı giriniz : ");
         fibonacci(scanner.nextInt());
+        System.out.println();
+        System.out.println("re fibonacci");
+        System.out.println(reFibonacci(scanner.nextInt()));
+    }
+
+    public static int reFibonacci(int i){
+        if (i<=1){
+
+            return i;
+        }else{
+            return reFibonacci(i-1) + reFibonacci(i-2);
+        }
+
     }
 
     public static void fibonacci(int number) {
